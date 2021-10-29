@@ -53,34 +53,153 @@
         <i>Rank your 5 favorite, and 5 least favorite, 
         activities from <a href="https://gist.github.com/fool/b0f254ff8c72a5765b6a9138249789d6" target="_blank">this list.</a></i>
       </p>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs">
-            <p>
-              Five Favorites (in no particular order):
-            </p>
-            <ol>
-              <li>Respond to 50+ support requests via email or chat most days</li>
-              <li>Dig through server logs to troubleshoot a customer's website behavior</li>
-              <li>Write and maintain documentation for our software and blog posts for our website</li>
-              <li>Debug a customer's build using a programming language and framework that you've never seen before</li>
-              <li>Set up your own copy of several static site frameworks for debugging</li>
-            </ol>
-          </div>
-          <div class="col-xs">
-            <p>
-            Five Least Favorites (in no particular order):
-            </p>
-            <ol>
-              <li>Manage a Support team</li>
-              <li>Find and recruit teammates for the Support team</li>
-              <li>Work with prospective customers to explain our service and the pricing model</li>
-              <li>Receive occasional phone calls requesting support from our highest-value customers</li>
-              <li>Respond to Netlify customers on Twitter</li>
-            </ol>
-          </div>
-        </div>
-      </div>
+      
+      <p>
+        Five Favorites (in no particular order):
+      </p>
+      <ol>
+        <li>Respond to 50+ support requests via email or chat most days</li>
+        <li>Dig through server logs to troubleshoot a customer's website behavior</li>
+        <li>Write and maintain documentation for our software and blog posts for our website</li>
+        <li>Debug a customer's build using a programming language and framework that you've never seen before</li>
+        <li>Set up your own copy of several static site frameworks for debugging</li>
+      </ol>
+      <p>
+      Five Least Favorites (in no particular order):
+      </p>
+      <ol>
+        <li>Manage a Support team</li>
+        <li>Find and recruit teammates for the Support team</li>
+        <li>Work with prospective customers to explain our service and the pricing model</li>
+        <li>Receive occasional phone calls requesting support from our highest-value customers</li>
+        <li>Respond to Netlify customers on Twitter</li>
+      </ol>
+    </div>
+    <div class="col-lg-4">
+      <h2>QUESTION 4</h2>
+      <hr />
+      <p>
+        <i>Provide a link to documentation for a technical/developer-focused product, which you think are well done, and explain why you think they are well done.</i>
+      </p>
+      <p>
+        The documentation for <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" target="_blank">Bootstrap</a> is one of my favorites.
+        The organizational flow of the content makes sense because it starts with the "base" (container element) and builds from there to the grid and column, which is exactly
+        how Bootstrap should be used in practice. I also appreciate the inline examples dispersed throughout the instructional text - if you want
+        to find out how Bootstrap columns work, just go to the "Columns" section of the documentation and resize the window
+        (or view it on a different size screen/device) to see the principles in action.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>QUESTION 5</h2>
+      <hr />
+      <p>
+        <i>Why do you think SSL/HTTPS is important? Please provide at least 3 reasons.</i>
+      </p>
+      <p>
+        <ol>
+          <li>HTTPS encrypts communications passed between a user and a site or service, making it more difficult for malicious actors to eavesdrop.</li>
+          <li>SSL certificates confirm and validate the identity of a particular site or service. 
+            This makes it more difficult for malicious actors to impersonate a legitimate service.</li>
+          <li>HTTPS can be faster than HTTP which means better accessibility for those on slower/limited network connections in addition to the security benefits.</li>
+        </ol>
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>QUESTION 6</h2>
+      <hr />
+      <p>
+        <i>Explain, in a couple of paragraphs, what you think 2 major challenges around DNS configuration are for less-technical customers hosting websites.</i>
+      </p>
+      <p>
+        One of the big challenges a less-technical person might face with configuring DNS is understanding different network protocols and how to set them 
+        correctly on the server. For instance, if TCP/IP isn't configured correctly in the server OS, nothing will work as expected and a less-technical person might 
+        have a lot of difficulty diagnosing what's wrong.</p>
+        <p>
+          Another challenge they might face is with maintenance and changes to an existing DNS configuration. There are guides which step through configuring a DNS 
+          server initially, but if changes need to be made (eg. adding a new network interface and pointing it to the correct DNS server) a less-technical person might 
+          run into a pitfall that a more technically proficient person would be able to avoid.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>QUESTION 7</h2>
+      <hr />
+      <p>
+        <i>A customer writes in saying their “site won’t build”. You have access to their build logs, and there you see this error: 
+          Build failed due to a user error: Build script returned non-zero exit code: 2. 
+          You have no more information than this and the site’s source repository is private so you cannot test the build yourself. 
+          How would you troubleshoot this issue? Please compose your best customer-facing answer.</i>
+      </p>
+      <p>
+        Thanks for reaching out! I'd be happy to help. 
+      </p>
+      <p>
+        I'm not able to test your specific build on my end since it looks like your repo is 
+        private, so can you confirm if your build succeeds locally or not?  Please let me know and we can work from there.
+      </p>
+      <p>
+        I look forward to your reply!
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>QUESTION 8</h2>
+      <hr />
+      <p>
+        <i>How would you set up an http 301 status redirect from “/netlify/anything” on your site, to 
+          <a href="https://www.google.com/search?q=anything" target="_blank">https://www.google.com/search?q=anything</a>? 
+          How about a proxy redirect? Please add that proxy redirect rule to your site.</i>
+      </p>
+      <p>
+        To set up a redirect, I would edit the netlify.toml file and add the correct parameters as outlined in 
+        <a href="https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file" target="_blank">this Help Center article</a>.
+        Specifically, the "from" parameter would be set to "/netlify/anything" and the "to" parameter set to the Google search URL.
+      </p>
+      <p>For the proxy redirect, I would follow the same steps but add the "status" parameter and set it to "200". Click on the "Proxy Redirect" link 
+        in the navigation bar to see this proxy in action.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>QUESTION 9</h2>
+      <hr />
+      <p>
+        <i>Please attempt to deploy a function on our service. This need not be complicated, could be "Hello World" or something fancier. 
+          Note that failure to deploy is not failing the exercise! Whether you have trouble or not, please describe what you experienced and 
+          how you attempted to troubleshoot, instead. We won't be asking you to share the function (but you can if you want to!), we just want 
+          to hear about the experience in some detail.</i>
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>QUESTION 10</h2>
+      <hr />
+      <p>
+        <i>We understand you don't know anything about our internal procedures at this stage, but we want you to explain at a high level how you'd 
+          react to this situation: You receive a report of a severe security issue on www.netlify.com. You can't 
+          immediately confirm, so what steps might you take to investigate or substantiate the report? What might you say to the reporter, even though 
+          we haven't confirmed their assertion yet, that will still leave the true impression that our business is very concerned about security? You 
+          believe there is a reasonable chance the report is correct and the problem is very large and impactful. How might you escalate?</i>
+      </p>
+      <p>
+        First, I would reply back to the customer to confirm that we've received the report - something to this effect:
+        <p>
+          Thanks for reporting this!
+        </p>
+        <p>
+          Security is extremely important to us - we seriously and thoroughly investigate the security vulnerability reports we receive. 
+          I'm sending this to our Security team for review along with the details you've provided, and I would also recommend filing a report through 
+          our Bug Bounty program if you haven't already done so (details here: https://hackerone.com/netlify). We appreciate all of the members of the 
+          security community who collaborate with us and 
+          Please let me know if you have any other concerns or questions and I'd be happy to help however I can.
+        </p>
+      </p>
+      <p>
+        I would then use the information provided in the report to validate the issue to the best of my ability, suggest a priority/severity level, and escalate
+        to the Security team. 
+        If it was a very large and impactful problem, I would also alert the relevant teams and stakeholders via on-call/after-hours escalation to ensure
+        the issue was addressed quickly.
+      </p>
+      </p>
     </div>
   </div>
 </div>
